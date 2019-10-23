@@ -27,7 +27,7 @@ const missScarlet = {
   color: "red",
   description: "She is sexy lady",
   age: 75,
-  image: "asset/scarlet.png",
+  image: "assets/scarlet.png",
   occupation: "Actress"
 }
 
@@ -56,10 +56,10 @@ const mrsWhite = {
   firstName: "Mrs",
   lastName: "White",
   color: "white",
-  description: "a good guy",
+  description: "she makes a great Martini",
   age: 45,
   image: "assets/white.png",
-  occupation: "Farmer"
+  occupation: "housewife"
 }
 
 
@@ -176,7 +176,7 @@ const mystery = {
   room: ""
 
 }
-
+// CREATE FUNCTIONS pickWeapon and pickRoom in a similar way.
 // FINISH THIS FUNCTION TO SHOW ALL INFORMATION ABOUT THE KILLER.
 // This function will be invoked when you click on the killer card.
 const pickKiller = () => {
@@ -188,16 +188,19 @@ const pickKiller = () => {
   const killerName = document.getElementById("killerName")
   const killerAge = document.getElementById("killerAge")
   const killerOccupation = document.getElementById("killerName")
-  const killerImage = document.createElement("killerImage")
+  const killerImage = document.getElementById("killerImage")
   const killerDescription = document.getElementById("killerDescription")
   theKiller.style.background = mystery.killer.color
 
   killerName.innerHTML = mystery.killer.firstName + " " + mystery.killer.lastName
   killerAge.innerHTML = mystery.killer.age
   killerOccupation.innerHTML = mystery.killer.occupation
-  killerImage.innerHTML = mystery.killer.image
+  killerImage.src = mystery.killer.image
   killerDescription.innerHTML = mystery.killer.description
 }
+
+
+
 
 const pickWeapon = () => {
   mystery.weapon = randomSelector(weapons)
@@ -215,7 +218,21 @@ const pickRoom = () => {
   roomName.innerHTML = mystery.room
 }
 
-// CREATE FUNCTIONS pickWeapon and pickRoom in a similar way.
+
 
 // CREATE A FUNCTION revealMystery that will be invoked when you click that button. It should show something like:
 // 'The murder was committed by Jacob Green, in the living room with a rope.'
+const solve = {}
+const revealMystery = (solve) => {
+  mystery.weapons = randomSelector(weapons),
+    mystery.suspects = randomSelector(suspects)
+  mystery.rooms = randomSelector(rooms)
+}
+
+revealMystery()
+
+console.log()
+
+document.getElementById("revealMystery").addEventListener("onclick", solve)
+document.getElementById("mystery").innerHTML = (`<h3>The murder was committed by ${suspects.name} ,
+    in the ${rooms} with a ${weapons.name} </h3>`)
