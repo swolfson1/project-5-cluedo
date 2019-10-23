@@ -10,8 +10,8 @@ const mrGreen = {
   occupation: "Entrepreneur"
 }
 
-const professorPlum = {
-  FirsttName: "Victor",
+const profPlum = {
+  firstName: "Victor",
   lastName: "Plum",
   color: "pulm",
   description: "He is quite and stick to himself",
@@ -21,7 +21,7 @@ const professorPlum = {
 
 }
 
-const MissScarlet = {
+const missScarlet = {
   firstName: "Cassandra",
   lastName: "Scarlet",
   color: "Scarlet",
@@ -42,8 +42,8 @@ const mrsPeacock = {
   occupation: "Entrepreneur"
 }
 
-const colonelMustard = {
-  FirstName: "jack",
+const mrMustard = {
+  firstName: "jack",
   lastName: "Mustard",
   color: "Mustard",
   description: "he is a likable guy with lots of friends, everyone loves him",
@@ -53,8 +53,8 @@ const colonelMustard = {
 }
 
 const mrsWhite = {
-  firstName = "Mrs",
-  lastName = "White",
+  firstName: "Mrs",
+  lastName: "White",
   color: "white",
   description: "a good guy",
   age: 45,
@@ -104,10 +104,15 @@ const bat = {
 
 }
 
-const Trophy = {
+const trophy = {
   name: "Trophy",
   weight: 2
 
+}
+
+const pistol = {
+  name: "Pistol",
+  weight: 4
 }
 
 // THE ROOMS ONLY HAS A NAME SO NO NEED FOR OBJECTS THERE.
@@ -122,18 +127,19 @@ const suspects = [
   missScarlet,
   mrsPeacock,
   mrMustard
+
 ]
 
 const weapons = [
-  Rope,
-  Knife,
-  Candlestick,
-  Dumbbell,
-  Poison,
-  Axe,
-  Bat,
-  Trophy,
-  Pistol
+  rope,
+  knife,
+  candlestick,
+  dumbbell,
+  poison,
+  axe,
+  bat,
+  trophy,
+  pistol
 ]
 
 const rooms = [
@@ -154,6 +160,7 @@ const rooms = [
   "Patio"
 ]
 
+console.log(rooms, weapons, suspects)
 // THIS FUNCTION WILL RANDOMLY SELECT ONE ITEM FOR THE ARRAY THAT YOU PASS IN TO THE FUNCTION.
 const randomSelector = array => {
   return array[Math.floor(Math.random() * array.length)]
