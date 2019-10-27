@@ -201,7 +201,6 @@ const pickKiller = () => {
 
 
 
-
 const pickWeapon = () => {
   mystery.weapon = randomSelector(weapons)
 
@@ -219,20 +218,16 @@ const pickRoom = () => {
 }
 
 
+const revealMystery = () => {
+  if (mystery.kill || mystery.weapon || mystery.room === onclick) {
+    document.getElementById("mystery").innerHTML = `The murder was commited by ${mystery.killer.firstName + " " + mystery.killer.lastName} in the ${mystery.room} with a ${mystery.weapon.name}`
+    document.getElementById("allCards").style.display = "none"
 
-// CREATE A FUNCTION revealMystery that will be invoked when you click that button. It should show something like:
-// 'The murder was committed by Jacob Green, in the living room with a rope.'
-const solve = {}
-const revealMystery = (solve) => {
-  mystery.weapons = randomSelector(weapons),
-    mystery.suspects = randomSelector(suspects)
-  mystery.rooms = randomSelector(rooms)
+
+  } else {
+    document.getElementById("alert").innerText = "You have to pick the cards to reveal the mystery"
+  }
+  mystery.weapons = randomSelector(weapons);
+  mystery.suspects = randomSelector(suspects);
+  mystery.rooms = randomSelector(rooms);
 }
-
-revealMystery()
-
-console.log()
-
-document.getElementById("revealMystery").addEventListener("onclick", solve)
-document.getElementById("mystery").innerHTML = (`<h3>The murder was committed by ${suspects.name} ,
-    in the ${rooms} with a ${weapons.name} </h3>`)

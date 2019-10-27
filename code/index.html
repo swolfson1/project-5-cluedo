@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <section class="cards">
+  <div id="alert"></div>
+  <section class="cards" id="allCards">
     <div class="killer-deck" id="killer" onclick="pickKiller()">
       <p>KILLER</p>
       <p id="killerName"></p>
@@ -29,9 +30,12 @@
       <p id="roomName"></p>
     </div>
   </section>
-  <h1 id="mystery"></h1>
-  <button onclick="revealMystery">REVEAL THE CRIME</button>
+  <div>
+    <h1 id="mystery"></h1>
+  </div>
 
+  <button id="revealMystery" onclick="revealMystery()">REVEAL THE CRIME</button>
+  <button id="startOver" onclick="reloadPage()">START OVER</button>
   <script src="clue.js"></script>
 </body>
 
