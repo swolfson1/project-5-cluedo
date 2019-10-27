@@ -222,6 +222,7 @@ const revealMystery = () => {
   if (mystery.kill || mystery.weapon || mystery.room === onclick) {
     document.getElementById("mystery").innerHTML = `The murder was commited by ${mystery.killer.firstName + " " + mystery.killer.lastName} in the ${mystery.room} with a ${mystery.weapon.name}`
     document.getElementById("allCards").style.display = "none"
+    document.getElementById("alert").style.display = "none"
 
 
   } else {
@@ -230,4 +231,9 @@ const revealMystery = () => {
   mystery.weapons = randomSelector(weapons);
   mystery.suspects = randomSelector(suspects);
   mystery.rooms = randomSelector(rooms);
+}
+
+
+const reloadPage = () => {
+  location.reload()
 }
