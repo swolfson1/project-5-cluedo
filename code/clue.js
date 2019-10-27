@@ -224,7 +224,6 @@ const revealMystery = () => {
     document.getElementById("allCards").style.display = "none"
     document.getElementById("alert").style.display = "none"
 
-
   } else {
     document.getElementById("alert").innerText = "You have to pick the cards to reveal the mystery"
   }
@@ -232,8 +231,6 @@ const revealMystery = () => {
   mystery.suspects = randomSelector(suspects);
   mystery.rooms = randomSelector(rooms);
 }
-
-
 const reloadPage = () => {
   location.reload()
 }
