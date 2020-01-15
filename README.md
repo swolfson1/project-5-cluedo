@@ -6,3 +6,5 @@ The user (who is the game leader and the one that will know all about the murder
 
 The focus on this project is to practice objects and arrays and also to manipulate the DOM with JavaScript.
 
+##
+deployed site: https://clue-swolfson1.netlify.com/
